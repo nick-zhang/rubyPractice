@@ -1,0 +1,41 @@
+#require 'ftools' 
+
+def parseClassFrom(csFile)
+   File.open(csFile, 'r') do |f1|  
+     while line = f1.gets  
+       if (/public class/.match(line) != nil) 
+           puts line.split(' ')[2] + " " + csFile
+       end
+     end  
+   end
+end
+
+def getCsFilesFromProjectFile(projectFileName)
+  csFiles = []
+  currentPath = File.dirname(projectFileName)
+  File.open(projectFileName, 'r') do |f1|  
+    while line = f1.gets  
+      if (/Compile Include=/.match(line) != nil) 
+          csFile = currentPath + "\\" + line.split('"')[1]
+          csFileReplaced = csFile.gsub("\\", "/")
+          # puts csFileReplaced
+          csFiles.push(csFileReplaced)
+      end
+    end  
+  end
+  csFiles
+end
+
+def getAllClassesFrom(root)
+  csFiles = []
+  Dir[root+"/**/*.csproj"].each{|s| File.path(s)}.each{|projectFile| csFiles.push(getCsFilesFromProjectFile(projectFile))}
+  
+  csFiles.each do |csfGroup|
+    csfGroup.each do |csfSingle|
+      parseClassFrom(csfSingle)
+    end
+  end
+end  
+
+getAllClassesFrom(".")
+
