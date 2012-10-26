@@ -18,7 +18,6 @@ def getCsFilesFromProjectFile(projectFileName)
       if (/Compile Include=/.match(line) != nil) 
           csFile = currentPath + "\\" + line.split('"')[1]
           csFileReplaced = csFile.gsub("\\", "/")
-          # puts csFileReplaced
           csFiles.push(csFileReplaced)
       end
     end  
