@@ -16,7 +16,7 @@ class XmlSectionParserTest < MiniTest::Unit::TestCase
   def testShouldReturnNilIfNotMatchedForContent
       lineToMatch = "<CanNotMatch>GridGCUIBase</CanNotMatch>"
       parseResult = @xmlSectionParser.getMatchedSectionContent(lineToMatch, "ToMatchSectionName")
-      assert_equal nil, parseResult
+      assert_nil parseResult
   end
   
   def testShouldReturnSectionPropertyIfMatched
@@ -28,7 +28,7 @@ class XmlSectionParserTest < MiniTest::Unit::TestCase
   def testShouldReturnNilIfNotMatchedForProperty
       lineToMatch = '<CanNotMatch="GCGridFramework\GcLocalizationSlot.cs" />'
       parseResult = @xmlSectionParser.getMatchedSectionProperty(lineToMatch, "ToMatchSectionName")
-      assert_equal nil, parseResult
+      assert_nil parseResult
   end
 
 end
