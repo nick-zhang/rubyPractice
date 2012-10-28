@@ -1,4 +1,12 @@
 # p001hello.rb 
+
+def say_goodnight (name)
+   "Good Night #{name.capitalize}" 
+end
+
+puts say_goodnight("john Smith")
+puts say_goodnight("Nick Zhang")
+
 puts 'hello'
 =begin  
   Ruby Strings  
@@ -22,3 +30,9 @@ puts PI
 
 # Run shell command 
 puts `pwd`
+
+
+
+
+
+

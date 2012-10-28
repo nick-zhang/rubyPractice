@@ -1,15 +1,18 @@
 #require 'ftools' 
-
+class CodeParser
+  
+private   
 def parseClassFrom(csFile)
    File.open(csFile, 'r') do |f1|  
      while line = f1.gets  
-       if (/public class/.match(line) != nil) 
+       if (/(public|internal) class/.match(line) != nil) 
            puts line.split(' ')[2] + " " + csFile
        end
      end  
    end
 end
 
+private
 def getCsFilesFromProjectFile(projectFileName)
   csFiles = []
   currentPath = File.dirname(projectFileName)
@@ -25,6 +28,7 @@ def getCsFilesFromProjectFile(projectFileName)
   csFiles
 end
 
+public 
 def getAllClassesFrom(root)
   csFiles = []
   Dir[root+"/**/*.csproj"].each{|s| File.path(s)}.each{|projectFile| csFiles.push(getCsFilesFromProjectFile(projectFile))}
@@ -34,7 +38,9 @@ def getAllClassesFrom(root)
       parseClassFrom(csfSingle)
     end
   end
-end  
+end
 
-getAllClassesFrom(".")
+end
 
+codeParser = CodeParser.new()
+codeParser.getAllClassesFrom(".")
