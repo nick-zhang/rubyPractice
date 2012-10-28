@@ -2,6 +2,12 @@ load 'StringSectionParser.rb'
 
 class CodeParser
   
+@@stringSectionParser = nil
+ 
+def initialize()
+  @@stringSectionParser = StringSectionParser.new()  
+end
+     
 private   
 def parseClassFrom(csFile)
    File.open(csFile, 'r') do |f1|  
@@ -17,11 +23,10 @@ private
 def getCsFilesFromProjectFile(projectFile)
   csFiles = []
   currentPath = File.dirname(projectFile)
-  stringSectionParser = StringSectionParser.new()
-  
+    
   File.open(projectFile, 'r') do |f1|  
     while line = f1.gets 
-      csFileName = stringSectionParser.getMatchedSectionProperty(line, "Compile Include")
+      csFileName = @@stringSectionParser.getMatchedSectionProperty(line, "Compile Include")
       if ( csFileName != nil)
         csFile = currentPath + "\\" + csFileName
         csFileReplaced = csFile.gsub("\\", "/")

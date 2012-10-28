@@ -15,6 +15,6 @@ class StringSectionParserTest < MiniTest::Unit::TestCase
        stringSParser = StringSectionParser.new()
        parseResult = stringSParser.getMatchedSectionProperty(lineToMatch, "Compile Include")
        assert_equal "GCGridFramework\\GcLocalizationSlot.cs", parseResult
-   end
+  end
 
 end
