@@ -1,4 +1,4 @@
-class StringSectionParser
+class XmlSectionParser
 public
   def getMatchedSectionContent(lineToMatch, sectionName)
     if (/#{sectionName}/.match(lineToMatch) != nil) 

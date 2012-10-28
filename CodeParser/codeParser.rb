@@ -1,11 +1,11 @@
-load 'StringSectionParser.rb'
+load 'XmlSectionParser.rb'
 
 class CodeParser
   
-@@stringSectionParser = nil
+@@xmlSectionParser = nil
  
 def initialize()
-  @@stringSectionParser = StringSectionParser.new()  
+  @@xmlSectionParser = XmlSectionParser.new()  
 end
      
 private   
@@ -26,7 +26,7 @@ def getCsFilesFromProjectFile(projectFile)
     
   File.open(projectFile, 'r') do |f1|  
     while line = f1.gets 
-      csFileName = @@stringSectionParser.getMatchedSectionProperty(line, "Compile Include")
+      csFileName = @@xmlSectionParser.getMatchedSectionProperty(line, "Compile Include")
       if ( csFileName != nil)
         csFile = currentPath + "\\" + csFileName
         csFileReplaced = csFile.gsub("\\", "/")

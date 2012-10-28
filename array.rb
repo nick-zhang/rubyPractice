@@ -12,6 +12,8 @@ array2 = ["ant", "bee", "cat", "dog", "elk"]
 puts array2
 puts "array2 0: #{array2[0]}"
 
+array2[1, 0] = ""
+
 
 array3 = %w{this is an array}
 puts array3 
