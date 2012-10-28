@@ -1,8 +1,15 @@
 # hash.rb
 
-hash1 = {
-  'a' => 'b',
-  'c' => 'd'
-}
+hash1 = {}
+array1 = %w(this is good)
+array2 = %w(this is bad)
 
-puts hash1['a']
+hash1['a'] = array1
+hash1['b'] = array2
+
+puts hash1.count
+
+hash1.each_key do |key|
+  puts "key #{key}"
+  puts hash1[key]
+end

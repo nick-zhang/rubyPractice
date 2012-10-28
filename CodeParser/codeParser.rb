@@ -9,11 +9,11 @@ def initialize()
 end
      
 private   
-def parseClassFrom(csFile)
+def parseClassFrom(assemblyName, csFile)
    File.open(csFile, 'r') do |f1|  
      while line = f1.gets  
        if (/(public|internal) class/.match(line) != nil) 
-           puts line.split(' ')[2] + " " + csFile
+           puts line.split(' ')[2] + ",#{assemblyName}," + csFile
        end
      end  
    end
@@ -21,11 +21,18 @@ end
 
 private
 def getCsFilesFromProjectFile(projectFile)
+  csFilesMap = {}
   csFiles = []
   currentPath = File.dirname(projectFile)
+  assemblyName = nil
     
   File.open(projectFile, 'r') do |f1|  
-    while line = f1.gets 
+    while line = f1.gets
+      tmpassemblyName =@@xmlSectionParser.getMatchedSectionContent(line, "AssemblyName")
+      if (tmpassemblyName != nil)
+         assemblyName = tmpassemblyName.strip
+      end
+       
       csFileName = @@xmlSectionParser.getMatchedSectionProperty(line, "Compile Include")
       if ( csFileName != nil)
         csFile = currentPath + "\\" + csFileName
@@ -34,7 +41,9 @@ def getCsFilesFromProjectFile(projectFile)
       end  
     end  
   end
-  csFiles
+  
+  csFilesMap[assemblyName] = csFiles
+  csFilesMap
 end
 
 public 
@@ -43,8 +52,10 @@ def getAllClassesFrom(root)
   Dir[root+"/**/*.csproj"].each{|s| File.path(s)}.each{|projectFile| csFiles.push(getCsFilesFromProjectFile(projectFile))}
   
   csFiles.each do |csfGroup|
-    csfGroup.each do |csfSingle|
-      parseClassFrom(csfSingle)
+    csfGroup.each_key do |assemble|
+      csfGroup[assemble].each do |csFile|
+        parseClassFrom(assemble, csFile)
+      end
     end
   end
 end
