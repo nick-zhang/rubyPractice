@@ -13,10 +13,10 @@ def parseClassFrom(csFile)
 end
 
 private
-def getCsFilesFromProjectFile(projectFileName)
+def getCsFilesFromProjectFile(projectFile)
   csFiles = []
-  currentPath = File.dirname(projectFileName)
-  File.open(projectFileName, 'r') do |f1|  
+  currentPath = File.dirname(projectFile)
+  File.open(projectFile, 'r') do |f1|  
     while line = f1.gets  
       if (/Compile Include=/.match(line) != nil) 
           csFile = currentPath + "\\" + line.split('"')[1]
