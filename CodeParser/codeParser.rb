@@ -1,4 +1,5 @@
-#require 'ftools' 
+load 'StringSectionParser.rb'
+
 class CodeParser
   
 private   
@@ -16,13 +17,16 @@ private
 def getCsFilesFromProjectFile(projectFile)
   csFiles = []
   currentPath = File.dirname(projectFile)
+  stringSectionParser = StringSectionParser.new()
+  
   File.open(projectFile, 'r') do |f1|  
-    while line = f1.gets  
-      if (/Compile Include=/.match(line) != nil) 
-          csFile = currentPath + "\\" + line.split('"')[1]
-          csFileReplaced = csFile.gsub("\\", "/")
-          csFiles.push(csFileReplaced)
-      end
+    while line = f1.gets 
+      csFileName = stringSectionParser.getMatchedSectionProperty(line, "Compile Include")
+      if ( csFileName != nil)
+        csFile = currentPath + "\\" + csFileName
+        csFileReplaced = csFile.gsub("\\", "/")
+        csFiles.push(csFileReplaced)
+      end  
     end  
   end
   csFiles
@@ -44,3 +48,4 @@ end
 
 codeParser = CodeParser.new()
 codeParser.getAllClassesFrom(".")
+
