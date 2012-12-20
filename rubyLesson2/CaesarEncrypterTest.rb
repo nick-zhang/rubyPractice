@@ -1,7 +1,7 @@
 load 'CaesarEncrypter.rb'
 require 'minitest/autorun'
 
-class CaesarTest < MiniTest::Unit::TestCase
+class CaesarEncrypterTest < MiniTest::Unit::TestCase
   
   def testShouldEncryptWithSingleLowercase
       encrypter = CaesarEncrypter.new()
