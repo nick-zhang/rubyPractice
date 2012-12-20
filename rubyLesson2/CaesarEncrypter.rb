@@ -2,13 +2,14 @@ class CaesarEncrypter
   private 
   @@Z_UPPER_ASCII = 'Z'.ord
   @@Z_LOWER_ASCII = 'z'.ord
+  ENCRYPT_CODE = 3
     
   public
-  def encrypt text, step
+  def encrypt text
     result = ''
     text.each_byte do |ascii|
-      encryptedAscii = ascii + step
-      if  encryptedAscii > @@Z_LOWER_ASCII || ( encryptedAscii > @@Z_UPPER_ASCII and ascii <= @@Z_UPPER_ASCII)
+      encryptedAscii = ascii + ENCRYPT_CODE
+      if (isAsciiOutOfLetters  ascii)
         result += (encryptedAscii - 26).chr
       else
         result += encryptedAscii.chr
@@ -16,4 +17,9 @@ class CaesarEncrypter
     end
     result
   end 
+  
+  private 
+  def isAsciiOutOfLetters ascii
+    ascii > @@Z_LOWER_ASCII - ENCRYPT_CODE || ( ascii > @@Z_UPPER_ASCII - ENCRYPT_CODE &&  ascii <= @@Z_UPPER_ASCII)
+  end
 end
