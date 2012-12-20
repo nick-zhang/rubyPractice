@@ -9,9 +9,11 @@
 
 
 array2 = ["ant", "bee", "cat", "dog", "elk"]
+puts array2[0, 2]
+
+puts "*****"
 puts array2
 puts "array2 0: #{array2[0]}"
-
 array2[1, 0] = ""
 
 
