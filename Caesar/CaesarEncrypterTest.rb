@@ -41,8 +41,8 @@ class CaesarTest < MiniTest::Unit::TestCase
   
   def testShouldEncryptWithMultiplMixedCases
       encrypter = CaesarEncrypter.new()
-      encrypted = encrypter.encrypt('Ab', 3)
-      assert_equal 'De', encrypted 
+      encrypted = encrypter.encrypt('xABYbz', 3)
+      assert_equal 'aDEBec', encrypted 
   end
   
 end
