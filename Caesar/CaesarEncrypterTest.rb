@@ -15,4 +15,9 @@ class CaesarTest < MiniTest::Unit::TestCase
       assert_equal 'D', encrypted 
   end
   
+  def testShouldEncryptWithTheEndSingleLowercase
+      encrypter = CaesarEncrypter.new()
+      encrypted = encrypter.encrypt('z')
+      assert_equal 'c', encrypted 
+  end
 end
