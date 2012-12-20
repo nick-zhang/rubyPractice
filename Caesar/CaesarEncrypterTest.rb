@@ -3,10 +3,16 @@ require 'minitest/autorun'
 
 class CaesarTest < MiniTest::Unit::TestCase
   
-  # Simple test here to show how to use MiniTest, but nonsense
-  def testShouldEncryptWithSingleLetter
+  def testShouldEncryptWithSingleLowercase
       encrypter = CaesarEncrypter.new()
       encrypted = encrypter.encrypt('a')
       assert_equal 'd', encrypted 
   end
+  
+  def testShouldEncryptWithSingleUppercase
+      encrypter = CaesarEncrypter.new()
+      encrypted = encrypter.encrypt('A')
+      assert_equal 'D', encrypted 
+  end
+  
 end
