@@ -27,4 +27,22 @@ class CaesarTest < MiniTest::Unit::TestCase
       assert_equal 'C', encrypted 
   end
   
+  def testShouldEncryptWithMultipleLowercases
+      encrypter = CaesarEncrypter.new()
+      encrypted = encrypter.encrypt('ab', 3)
+      assert_equal 'de', encrypted 
+  end
+  
+  def testShouldEncryptWithMultiplUppercases
+      encrypter = CaesarEncrypter.new()
+      encrypted = encrypter.encrypt('AB', 3)
+      assert_equal 'DE', encrypted 
+  end
+  
+  def testShouldEncryptWithMultiplMixedCases
+      encrypter = CaesarEncrypter.new()
+      encrypted = encrypter.encrypt('Ab', 3)
+      assert_equal 'De', encrypted 
+  end
+  
 end
