@@ -1,12 +1,13 @@
 class CaesarEncrypter
   public
-  def encrypt text
+  def encrypt text, step
     result = ''
     text.each_byte do |ascii|
-      if (ascii + 3) > 'z'.ord
-        result += ((ascii + 3) - 26).chr
+      encryptedAscii = ascii + step
+      if  encryptedAscii > 'z'.ord || ( encryptedAscii > 'Z'.ord and ascii <= 'Z'.ord)
+        result += (encryptedAscii - 26).chr
       else
-        result += (ascii + 3).chr
+        result += encryptedAscii.chr
       end
     end
     result
