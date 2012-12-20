@@ -1,0 +1,226 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D64844AB-08DA-4E35-8052-64BE554AF399}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GridGCUIBase</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GridGCUIBase</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GCUIBase, Version=4.0.4211.897, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\GCUIBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DSClients, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\Interop.DSClients.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.EventHostSubscriber">
+      <Name>Interop.EventHostSubscriber</Name>
+      <HintPath>S:\Interop.EventHostSubscriber.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.EventsInterface">
+      <Name>Interop.EventsInterface</Name>
+      <HintPath>S:\Interop.EventsInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\Interop.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="LocalizationLib">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\LocalizationLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NewUIImpl">
+      <Name>NewUIImpl</Name>
+      <HintPath>S:\NewUIImpl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SlbGrid2, Version=2.0.20119.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\\SlbGrid2.dll</HintPath>
+    </Reference>
+    <Reference Include="SlbHzFwkDscTokens, Version=4.0.3396.436, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\SlbHzFwkDscTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="syncfusion.grid.base, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\\syncfusion.grid.base.dll</HintPath>
+    </Reference>
+    <Reference Include="syncfusion.grid.windows, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\\syncfusion.grid.windows.dll</HintPath>
+    </Reference>
+    <Reference Include="syncfusion.shared.base, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\\syncfusion.shared.base.dll</HintPath>
+    </Reference>
+    <Reference Include="syncfusion.shared.windows, Version=6.102.0.34, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\\syncfusion.shared.windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UIFwkInterfaces">
+      <Name>UIFwkInterfaces</Name>
+      <HintPath>S:\UIFwkInterfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GCGridFramework\GcCollectionServiceFactory.cs" />
+    <Compile Include="GCGridFramework\GcEnsembleService.cs" />
+    <Compile Include="GCGridFramework\GcLocalizationService.cs">
+    </Compile>
+    <Compile Include="GCGridFramework\GcLocalizationSlot.cs" />
+    <Compile Include="GCGridFramework\GcMultipleTitleBlockBuilder.cs" />
+    <Compile Include="GCGridFramework\GcBlockBuilder.cs" />
+    <Compile Include="GCGridFramework\GcCellDefinition.cs" />
+    <Compile Include="GCGridFramework\GcDataTuple.cs" />
+    <Compile Include="GCGridFramework\GcEquipPropService.cs" />
+    <Compile Include="GCGridFramework\GcParameterService.cs" />
+    <Compile Include="GCGridFramework\GcParameterTupleProxyService.cs" />
+    <Compile Include="GCGridFramework\GcParameterTupleService.cs" />
+    <Compile Include="GCGridFramework\GcParameteSimpleServie.cs" />
+    <Compile Include="GCGridFramework\GcRegionBuilder.cs" />
+    <Compile Include="GCGridFramework\GcRegionDefinition.cs" />
+    <Compile Include="GCGridFramework\GcRegionDescColumnBuilder.cs" />
+    <Compile Include="GCGridFramework\GcRegionEmptyColumnBuilder.cs" />
+    <Compile Include="GCGridFramework\GcRegionOneColumnBuilder.cs" />
+    <Compile Include="GCGridFramework\GcRegionTwoColumnBuilder.cs" />
+    <Compile Include="GCGridFramework\GcRowDefintion.cs" />
+    <Compile Include="GCGridFramework\GcRunCollectionService.cs" />
+    <Compile Include="GCGridFramework\GcCellBorderDef.cs" />
+    <Compile Include="GCGridFramework\GcBlock.cs" />
+    <Compile Include="GCGridFramework\GcCellStyle.cs" />
+    <Compile Include="GCGridFramework\GcElementAnchor.cs" />
+    <Compile Include="GCGridFramework\GcEmptyCell.cs" />
+    <Compile Include="GCGridFramework\GcGrid.cs" />
+    <Compile Include="GCGridFramework\GcGridDefinition.cs" />
+    <Compile Include="GCGridFramework\GcGridStyleRoutine.cs" />
+    <Compile Include="GCGridFramework\GcLabelSlot.cs" />
+    <Compile Include="GCGridFramework\GcParameterIdentity.cs" />
+    <Compile Include="GCGridFramework\GcParameterSlot.cs" />
+    <Compile Include="GCGridFramework\GcPosition.cs" />
+    <Compile Include="GCGridFramework\GcRegion.cs" />
+    <Compile Include="GCGridFramework\GcRow.cs" />
+    <Compile Include="GCGridFramework\GcRunNoSlot.cs" />
+    <Compile Include="GCGridFramework\GcTextCell.cs" />
+    <Compile Include="GCGridFramework\GcUnitService.cs" />
+    <Compile Include="GCGridFramework\IGcCollectionService.cs" />
+    <Compile Include="GCGridFramework\IGcDataSlot.cs" />
+    <Compile Include="GCGridFramework\IGcElement.cs" />
+    <Compile Include="GCGridFramework\IGcGrid.cs" />
+    <Compile Include="GCGridFramework\IGcParameterTupleService.cs" />
+    <Compile Include="GCGridFramework\IGcRegionDefinitionBuilder.cs" />
+    <Compile Include="GridGCUIBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="GridGCUIBase.resx">
+      <DependentUpon>GridGCUIBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" S:\</PostBuildEvent>
+  </PropertyGroup>
+</Project>
