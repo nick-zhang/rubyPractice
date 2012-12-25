@@ -10,4 +10,4 @@ def encrypt text
   result
 end
 
-puts encrypt 'Za'
+puts encrypt 'Za'

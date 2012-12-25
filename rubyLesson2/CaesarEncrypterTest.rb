@@ -1,4 +1,4 @@
-load 'CaesarEncrypter.rb'
+require './CaesarEncrypter'
 require 'minitest/autorun'
 
 class CaesarEncrypterTest < MiniTest::Unit::TestCase
