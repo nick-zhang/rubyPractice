@@ -17,4 +17,12 @@ class SongTest < MiniTest::Unit::TestCase
     assert_equal 30, song.duration
   end
 
+  def testClassAttribute
+    song1 = Song.new("Happy Christmas!", "Nick", 30)
+    song2 = Song.new("One Love!", "Carry", 130)
+    
+    song1.play
+    song2.play
+  end
+    
 end

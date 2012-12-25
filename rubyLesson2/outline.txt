@@ -3,6 +3,7 @@
 	dynamically add more to existing class
 	inheritance, super
 	access attribute
+	class attribute & class method
 	
 2. Unit test framework -> MiniTest.  (UPPER CASE variable is constant)
 3. Naming:
