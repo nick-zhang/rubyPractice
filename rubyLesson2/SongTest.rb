@@ -7,6 +7,7 @@ class SongTest < MiniTest::Unit::TestCase
   
   def setup
     @song = Song.new("Happy Christmas!", "Nick", 30)
+    puts "-----------In setup----------"
   end
 
   def testSongInitializeAndAddMoreFeaturesDynamically
@@ -35,5 +36,9 @@ class SongTest < MiniTest::Unit::TestCase
     song2 = Song.new("One Love Again!", "James", 350)
     assert SongList.isTooLong song2    
   end
+    
+  def teardown
+    puts "-----------In teardown----------"
+  end  
     
 end
