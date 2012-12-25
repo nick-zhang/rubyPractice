@@ -21,6 +21,10 @@ class Song
   
   attr_reader :duration
   
+  def duration= new_duration
+    @duration = new_duration
+  end
+  
   def printName 
     puts @name
   end

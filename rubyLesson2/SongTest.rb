@@ -16,11 +16,16 @@ class SongTest < MiniTest::Unit::TestCase
     @song.lyrics
   end
 
-  def testAccessSongAttributes
+  def testReadSongAttribute
     assert_equal "Happy Christmas!", @song.name  
     assert_equal 30, @song.duration
   end
-    
+  
+  def testWriteSongAttribute
+    @song.duration = 150
+    assert_equal 150, @song.duration
+  end
+  
   def testClassAttribute
     song1 = Song.new("Happy Christmas!", "Nick", 30)
     song2 = Song.new("One Love!", "Carry", 130)

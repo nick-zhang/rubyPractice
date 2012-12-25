@@ -2,7 +2,7 @@
 	initialize()  
 	dynamically add more to existing class
 	inheritance, super
-	access object attribute
+	access object attribute, read and write
 	class attribute & class method
 	access right control: only for methods
 	
