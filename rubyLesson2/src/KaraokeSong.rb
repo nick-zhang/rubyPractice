@@ -1,4 +1,4 @@
-require './Song'
+require '../src/Song'
 
 class KaraokeSong < Song
   def initialize(name, artist, duration)

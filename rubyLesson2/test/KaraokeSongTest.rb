@@ -1,4 +1,4 @@
-require './KaraokeSong' 
+require '../src/KaraokeSong' 
 require 'minitest/autorun'
 
 class KaraokeSongTest < MiniTest::Unit::TestCase

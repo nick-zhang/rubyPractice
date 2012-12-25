@@ -1,4 +1,4 @@
-require './CaesarEncrypter'
+require '../src/CaesarEncrypter'
 require 'minitest/autorun'
 
 class CaesarEncrypterTest < MiniTest::Unit::TestCase

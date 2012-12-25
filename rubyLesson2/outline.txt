@@ -4,7 +4,7 @@
 	inheritance, super
 	access object attribute, read and write
 	class attribute & class method
-	access right control: only for methods
+	access right control: only for methods. Two ways to define access right. 
 	
 2. Unit test framework -> MiniTest.  (UPPER CASE variable is constant)
 	http://ruby-doc.org/stdlib-1.9.3/libdoc/minitest/unit/rdoc/MiniTest/

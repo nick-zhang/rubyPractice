@@ -1,6 +1,6 @@
-require './Song'
-require './SongMore'
-require './SongList'
+require '../src/Song'
+require '../src/SongMore'
+require '../src/SongList'
 require 'minitest/autorun'
 
 class SongTest < MiniTest::Unit::TestCase
