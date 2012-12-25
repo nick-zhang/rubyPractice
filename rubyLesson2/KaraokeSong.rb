@@ -7,6 +7,7 @@ class KaraokeSong < Song
   end
   
   def lyrics
+    super
     puts "The lyrics for KaraokSong."
   end
 end

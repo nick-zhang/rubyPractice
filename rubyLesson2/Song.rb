@@ -11,6 +11,16 @@ class Song
 end
 
 class Song
+  def name 
+    @name
+  end
+  
+  def artist
+    @artist
+  end
+  
+  attr_reader :duration
+  
   def printName 
     puts @name
   end

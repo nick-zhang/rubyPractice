@@ -10,5 +10,11 @@ class SongTest < MiniTest::Unit::TestCase
     puts song.printArtist
     song.lyrics
   end
+  
+  def testAccessSongAttributes
+    song = Song.new("Happy Christmas!", "Nick", 30)
+    assert_equal "Happy Christmas!", song.name  
+    assert_equal 30, song.duration
+  end
 
 end
