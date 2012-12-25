@@ -1,7 +1,8 @@
 1. Class definition, access right, class fields
 	initialize()  
 	dynamically add more to existing class
-
+	inheritance, super
+	
 2. Unit test framework -> MiniTest.  (UPPER CASE variable is constant)
 3. Naming:
 http://rubylearning.com/satishtalim/ruby_names.html

@@ -8,6 +8,7 @@ class SongTest < MiniTest::Unit::TestCase
     song = Song.new("Happy Christmas!", "Nick", 30)
     puts song.printName
     puts song.printArtist
+    song.lyrics
   end
 
 end
