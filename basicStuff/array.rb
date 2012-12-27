@@ -7,6 +7,8 @@
 #   puts item
 # end
 
+a = (1..10).to_a
+puts "1 - 10: #{a}"
 
 array2 = ["ant", "bee", "cat", "dog", "elk"]
 puts array2[0, 2]
@@ -18,4 +20,6 @@ array2[1, 0] = ""
 
 
 array3 = %w{this is an array}
+
+puts "array3 count length > 4: #{array3.count {|item | item.length > 4} }"
 puts array3 
