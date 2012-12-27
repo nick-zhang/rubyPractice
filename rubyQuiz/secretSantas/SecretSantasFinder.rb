@@ -22,4 +22,8 @@ class SecretSantasFinder
     return true
   end
   
+  def hasSameFamilyName name1, name2
+    return name1.split(" ").last == names.split(" ").last
+  end
+  
 end

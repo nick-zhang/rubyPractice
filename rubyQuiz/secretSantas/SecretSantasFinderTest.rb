@@ -17,11 +17,11 @@ class SecretSantasFinderTest < MiniTest::Unit::TestCase
   
   def testShouldFindSantansForTwoPlayers
     players = {"Luke Skywalker" =>   "<luke@theforce.net>",
-              "Leia Skywalker"  => "<leia@therebellion.org"
+              "Toula Portokalos" => "<toula@manhunter.org>", 
               }
     
     santas = @santasFinder.find(players)
-    assert_equal "<luke@theforce.net>", santas["Leia Skywalker"]
+    assert_equal "<luke@theforce.net>", santas["Toula Portokalos"]
   end
   
   def testShouldFindSantansForMultiplePlayers
@@ -34,5 +34,13 @@ class SecretSantasFinderTest < MiniTest::Unit::TestCase
     refute_equal "<virgil@rigworkersunion.org>",santas["Virgil Brigman"] 
     refute_equal "<lindsey@iseealiens.net>",santas["Lindsey Brigman"]      
   end
+   
+  def testPeopleFromTheSameFamilyCanNotBeTheirSantas
+    santas = @santasFinder.find(@players)
+    # refute_equal "<luke@theforce.net>",santas["Luke Skywalker"] 
+    # refute_equal "<luke@theforce.net>",santas["Leia Skywalker"] 
+    # refute_equal "<leia@therebellion.org>",santas["Leia Skywalker"] 
+    # refute_equal "<leia@therebellion.org>",santas["Luke Skywalker"] 
+  end 
    
 end
