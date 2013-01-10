@@ -1,3 +1,8 @@
+References: 
+http://docs.ruby-doc.com/docs/ProgrammingRuby/
+
+source code structure
+
 1. Class definition, access right, class fields
 	initialize()  
 	dynamically add more to existing class
@@ -10,7 +15,7 @@
 	http://ruby-doc.org/stdlib-1.9.3/libdoc/minitest/unit/rdoc/MiniTest.html
 	run given test: ruby SongTest.rb --name testSongListClassMethod
 	setup, teardown
-
+	
 3. Naming:
 http://rubylearning.com/satishtalim/ruby_names.html
 
