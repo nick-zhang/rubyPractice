@@ -4,6 +4,15 @@
 # Methods that are "dangerous," or modify the receiver, might be named  
 # with a trailing ! (Bang methods)  
 # A simple method  
+
+def varargs(*rest)
+  puts "Got args #{rest.join(', ')}"
+end
+
+puts varargs "one"
+puts varargs "one", "two"
+puts varargs "one", "two", "three"
+
 def hello  
   'Hello'  
 end  
