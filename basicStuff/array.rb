@@ -23,3 +23,13 @@ array3 = %w{this is an array}
 
 puts "array3 count length > 4: #{array3.count {|item | item.length > 4} }"
 puts array3 
+
+#inject
+summary = [1,3,5,7].inject(0) do |sum, item| 
+  sum + item 
+  end
+
+puts "Inject for summary:#{summary}"
+
+multiply = [1,3,5,7].inject(1) {|mul, item| mul * item}
+puts "Inject for multiply:#{multiply}"

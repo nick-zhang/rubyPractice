@@ -37,10 +37,22 @@ class SecretSantasFinderTest < MiniTest::Unit::TestCase
    
   def testPeopleFromTheSameFamilyCanNotBeTheirSantas
     santas = @santasFinder.find(@players)
-    # refute_equal "<luke@theforce.net>",santas["Luke Skywalker"] 
+    refute_equal "<luke@theforce.net>",santas["Luke Skywalker"] 
     # refute_equal "<luke@theforce.net>",santas["Leia Skywalker"] 
     # refute_equal "<leia@therebellion.org>",santas["Leia Skywalker"] 
     # refute_equal "<leia@therebellion.org>",santas["Luke Skywalker"] 
+  end
+  
+  def testShouldTellWetherTheFamilyNameIsTheSame
+    name1 = "Luke Skywalker"
+    name2 = "Leia Skywalker"
+    assert @santasFinder.hasSameFamilyName name1, name2 
   end 
+
+  def testShouldTellWetherTheFamilyNameIsNotTheSame
+    name1 = "Luke Skywalker"
+    name2 = "Lindsey Brigman"
+    refute @santasFinder.hasSameFamilyName name1, name2 
+  end
    
 end

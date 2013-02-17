@@ -14,16 +14,16 @@ class SecretSantasFinder
 	  players
   end
   
+  def hasSameFamilyName name1, name2
+    return name1.split(" ").last.eql? name2.split(" ").last
+  end
+  
   private 
   def compareMails originalMails, currentMails
     originalMails.each_with_index do |mail, i|
       return false if mail == currentMails[i]
     end
     return true
-  end
-  
-  def hasSameFamilyName name1, name2
-    return name1.split(" ").last == names.split(" ").last
-  end
-  
+  end  
+    
 end
