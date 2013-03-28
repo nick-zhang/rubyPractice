@@ -10,20 +10,17 @@ end
 def printStarsNew(rTimes)
   if rTimes == 1
     puts "*" 
-    return 
+    return
   end
   
-  i = 0
-  while i < rTimes do 
+  printStarsNew(rTimes -1) if rTimes > 1
+  
+  1.upto(rTimes) do |i|
     print "*"
-    i=i+1
   end
+  
   print "\n"
   
-  printStarsNew(rTimes -1) 
-
 end
 
 printStarsNew(3)
-
- 
